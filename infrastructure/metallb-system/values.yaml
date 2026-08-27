@@ -197,6 +197,11 @@ metallb:
     # -- Controller log level. Must be one of: `all`, `debug`, `info`, `warn`, `error` or `none`
     logLevel: info
     # command: /controller
+
+    ## MODIFIED
+    hostNetwork: true
+    dnsPolicy: ClusterFirstWithHostNet
+    
     webhookMode: enabled
     image:
       repository: quay.io/metallb/controller
