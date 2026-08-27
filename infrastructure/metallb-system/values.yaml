@@ -201,8 +201,8 @@ metallb:
     ## MODIFIED
     hostNetwork: true
     dnsPolicy: ClusterFirstWithHostNet
-    
-    webhookMode: enabled
+
+    webhookMode: disable ## MODIFIED
     image:
       repository: quay.io/metallb/controller
       tag:
@@ -389,7 +389,7 @@ metallb:
 
   crds:
     enabled: true
-    validationFailurePolicy: Fail
+    validationFailurePolicy: Ignore ## MODIFIED
 
   # frrk8s contains the configuration related to using an frrk8s instance
   # (github.com/metallb/frr-k8s) as the backend for the BGP implementation.
