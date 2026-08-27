@@ -17,4 +17,4 @@ appVersion: "0.16.0"
 dependencies:
 - name: metallb
   version: *v
-  repository: oci://harbor.greyroom.net/helm-charts
+  repository: https://metallb.github.io/metallb
