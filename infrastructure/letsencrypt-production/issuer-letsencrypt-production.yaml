@@ -1,17 +1,19 @@
----
-apiVersion: cert-manager.io/v1
-kind: ClusterIssuer
-metadata:
-  name: issuer-letsencrypt-production
-spec:
-  acme:
-    server: https://acme-v02.api.letsencrypt.org/directory
-    email: mattia.vallortigara@protonmail.com
-    privateKeySecretRef:
-      name: issuer-letsencrypt-production
-    solvers:
-      - dns01:
-          cloudflare:
-            apiTokenSecretRef: # Changed from apiKeySecretRef
-              name: cloudflare-api-key-secret
-              key: api-key
+{
+  "kind": "SealedSecret",
+  "apiVersion": "bitnami.com/v1alpha1",
+  "metadata": {
+    "name": "cloudflare-api-key-secret",
+    "namespace": "cert-manager"
+  },
+  "spec": {
+    "template": {
+      "metadata": {
+        "name": "cloudflare-api-key-secret",
+        "namespace": "cert-manager"
+      }
+    },
+    "encryptedData": {
+      "api-key": "AgBQsTNseBtDEVZ+tQyy8Tb3TwjfOLJ0FwuOdV6X46FtPatdvYaWqgF+bga8lleXz727xy9wtkXKRqmXAZvqA5cNMNYgxkEMh2UZrUHGJx57nDN0Z9wKdKOmoDcER39+sazM/mhU8ZM0j8gWCQKmP0j2RuPJH0k9ztnCA2Hle1vteRoDHRmdeOMvrvW6VJcl1F8gDmtS0Xap1iZegho3RVurMOy3uK8eUe+1irCe8Ua7a7OqxSUPyV4Uy2YYfQP8DiR7eIekPTGFUs4e0+30v6DGUb+ds5JyqoqlZysPXOspyLxj3iPSDoDGTGs4qB5TCPJNSKz/O/cH/Jab2L64ZQ/QZS4buDsLefR14jMajscs8M5Y/Qqhj+cdZ9YBG40qMVB7aPaLTtQcClmtebrZCsUcR0c/YqeQxU1DxQMXapvTqwhDlwQzFDUZfG2uie05Nk4V9CYWIBlM9isXq2UaEeg5xmlfv7uiyE2rZ7yrqGLoX94QlnsotLZoMv+PbfYYzWGyBTPl7FmGnDKcJyUJc172j2FHW3XjmgNN5/lZog5Y3YkXm3OWZupK0u4Y+qUCIIjpLjjaV9CeCTZNuj1ZoxZpU4sH2RPJ5LMAiI9aZo8Ycu7YxK3aENaNo6a07TuPd8K3pnOSsWGsfSgqP+ZAMH48FABjEYqn0t5WweKrNObzlUWk7L0KFy0M/fpw/4UleZrRFgowJ7r4/V+W2UAiTeJXYp/r/hvmoaJWerzHuiPVbr7ZW3Hpazpz"
+    }
+  }
+}
