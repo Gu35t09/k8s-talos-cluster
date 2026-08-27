@@ -3,17 +3,17 @@
   "apiVersion": "bitnami.com/v1alpha1",
   "metadata": {
     "name": "kasten-basic-auth",
-    "namespace": "kasten-io"
+    "namespace": "kasten"
   },
   "spec": {
     "template": {
       "metadata": {
         "name": "kasten-basic-auth",
-        "namespace": "kasten-io"
+        "namespace": "kasten"
       }
     },
     "encryptedData": {
-      "auth": "AgATJ6fCNW0+Brj1Pb2+V/VaYzIDpix+esznUG67gCtbOdsGYduG83z2a+fNIrS20LNlSsnRVc/J7Fi7tAlCBJ+gr+4exOc7tH9mUZwnTt5j0e9anDyxnCWIwUQLxNVDE1y1bOG3dyME5de+3Zw5U+9/6LqgYuGycR1D+EVzBpFjZzfEDscfjfcoeq7R8q4isLHOiyvEtCHAyPKtABbej97P6/DICA6TxTmBVtjqWUu+jHbweFTjlkjRVT87ZsdnjSe5nLgJnAa0FQ4bjBsREXdvI3xb1bUnvjAC7bIegVSurtcW56xsp4+T76fIVTPrNnrPad+0ypvZ+Ybw8MAsQDzJRBv4ehlfgUhf7Z4QMZdYd5w0Mt8Ii0z+djMU4bqonRW6IBK5JqzAw3PwNGLTaZ8KDYeTKELzCh1yllrAyOqcRRslYqi3GE1WfigOWe8RVaa1ziBa5EO2bI3K4f80Y+2KoPOzw9YUYVaG+TWrGHhHxzh5FGOoCgKrbDkGko2Bi/eqeRGEJuf82DB5adXVEEOCzK1h/mtEeXpynCzp8OKNtiDr5AgrQMFYuVfZiVgUQPP4vJ1OdSsSbKtF1oLqK2xVAFyXTlivSGHxgUMLamrZncbzk1qYH+YXZCpTYeaFYIlvGOMHJfOrKV0vYEBfcrKM3yyeSrgY2cM3hQsmxfvQq3bEbiYhfPTevveymYaD+V/iNKiJUp39rgF2ohzxmQFa+iWpOJj7gMChCq3uDs9wrzRGpNgkd2JBa310aRp29/EdrP3FYs8MHiVPT9gqqzYLz2Q="
+      "auth": "AgCQZGWD0MmS6jOyDsEkGztmqotU7OC2T3GTOjzZE6zgVRHF0WY7EIpwgQXPgGZwcN4mWdhyN3bk1Rw4/U6Z+LBQJyjOcahcEcq8oHKhecMKQ4oCrTF4boul+EvZyDlsvFke8g7Xn9i+jh5BoUXsJoPWeQXcwd4iKtUF0T7LBMjmLPlNfl3ZhUiLZWq1glIHCD9net5APPvoPtf8wqgleXjs6kyS4RbRH9oWa5LDsQZmg4qjIsQLDgpM/baN8DhgPp9Msf+HSLBpKuDhxq+CkS6B+mWF/CoTVomdI0Z9VeviCNIXf/i4P4wanlXev+0K6dfqUS0Y7JK9JQTGy8eUcTrpAxMZvtj/VnKPypfdHnxs4T7FKhqdSr/z2V0lq3ZUgziB5AlD7RhWvmd/29ewFR0pEf0hyFL+4oR3eA9vzkrZVqbpJYDWYx/mJXZ8wfRNCs7II0XvX/+noaScSJGiVfDbXdLuT8DSm4gprfaSLWmdl6zK9LN0AOOE//FJtC06FgisgzL84ebT/k0P8HrOtXb7I89W03YDu48WVAD69i1pdHFGj0hyKHZzvi1rHX6IqZSjSsMoMhKDAI0EolUHA/wZsB0Vl8rZcnK1eWCRFuVIN4/MtgouT9g3mlFCc20XzBuE7XLRy8rdWARTNJPfir0QrMaR+9LQdH7ttIMf/FXkQQjwU5WJjA51+Q7ypgQCXkgg+X7rJAQGl14MAwKR5UOtTcR7UXiTgJ9cVyrRWd8ii7WMyINzSjqv/cRW6GSZldEkdm2RoTp3TT+2n5wnaxvKrws="
     }
   }
 }
