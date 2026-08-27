@@ -198,10 +198,6 @@ metallb:
     logLevel: info
     # command: /controller
 
-    ## MODIFIED
-    hostNetwork: true
-    dnsPolicy: ClusterFirstWithHostNet
-
     webhookMode: disable ## MODIFIED
     image:
       repository: quay.io/metallb/controller
