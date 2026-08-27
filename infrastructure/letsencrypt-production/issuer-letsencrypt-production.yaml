@@ -12,7 +12,6 @@ spec:
     solvers:
       - dns01:
           cloudflare:
-            email: mattia.vallortigara@protonmail.com
-            apiKeySecretRef:
-              name: cloudflare-api-key-secret
-              key: api-key
+            apiTokenSecretRef: # Changed from apiKeySecretRef
+              name: cloudflare-api-token-secret
+              key: api-token
