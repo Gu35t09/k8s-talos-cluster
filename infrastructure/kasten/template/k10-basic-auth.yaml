@@ -1,0 +1,19 @@
+{
+  "kind": "SealedSecret",
+  "apiVersion": "bitnami.com/v1alpha1",
+  "metadata": {
+    "name": "kasten-basic-auth",
+    "namespace": "kasten-io"
+  },
+  "spec": {
+    "template": {
+      "metadata": {
+        "name": "kasten-basic-auth",
+        "namespace": "kasten-io"
+      }
+    },
+    "encryptedData": {
+      "auth": "AgATJ6fCNW0+Brj1Pb2+V/VaYzIDpix+esznUG67gCtbOdsGYduG83z2a+fNIrS20LNlSsnRVc/J7Fi7tAlCBJ+gr+4exOc7tH9mUZwnTt5j0e9anDyxnCWIwUQLxNVDE1y1bOG3dyME5de+3Zw5U+9/6LqgYuGycR1D+EVzBpFjZzfEDscfjfcoeq7R8q4isLHOiyvEtCHAyPKtABbej97P6/DICA6TxTmBVtjqWUu+jHbweFTjlkjRVT87ZsdnjSe5nLgJnAa0FQ4bjBsREXdvI3xb1bUnvjAC7bIegVSurtcW56xsp4+T76fIVTPrNnrPad+0ypvZ+Ybw8MAsQDzJRBv4ehlfgUhf7Z4QMZdYd5w0Mt8Ii0z+djMU4bqonRW6IBK5JqzAw3PwNGLTaZ8KDYeTKELzCh1yllrAyOqcRRslYqi3GE1WfigOWe8RVaa1ziBa5EO2bI3K4f80Y+2KoPOzw9YUYVaG+TWrGHhHxzh5FGOoCgKrbDkGko2Bi/eqeRGEJuf82DB5adXVEEOCzK1h/mtEeXpynCzp8OKNtiDr5AgrQMFYuVfZiVgUQPP4vJ1OdSsSbKtF1oLqK2xVAFyXTlivSGHxgUMLamrZncbzk1qYH+YXZCpTYeaFYIlvGOMHJfOrKV0vYEBfcrKM3yyeSrgY2cM3hQsmxfvQq3bEbiYhfPTevveymYaD+V/iNKiJUp39rgF2ohzxmQFa+iWpOJj7gMChCq3uDs9wrzRGpNgkd2JBa310aRp29/EdrP3FYs8MHiVPT9gqqzYLz2Q="
+    }
+  }
+}
