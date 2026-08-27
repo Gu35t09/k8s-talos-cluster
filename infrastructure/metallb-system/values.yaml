@@ -198,7 +198,7 @@ metallb:
     logLevel: info
     # command: /controller
 
-    webhookMode: disable ## MODIFIED
+    webhookMode: disabled ## MODIFIED
     image:
       repository: quay.io/metallb/controller
       tag:
