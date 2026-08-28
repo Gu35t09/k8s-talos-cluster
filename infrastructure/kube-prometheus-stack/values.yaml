@@ -654,7 +654,7 @@ kube-prometheus-stack:
 
       ## Hosts must be provided if Ingress is enabled.
       ##
-      hosts: []
+      hosts: ## MODIFIED
          - alertmanager.greyroom.net ## MODIFIED
 
       ## Paths to use for ingress rules - one path should match the alertmanagerSpec.routePrefix
