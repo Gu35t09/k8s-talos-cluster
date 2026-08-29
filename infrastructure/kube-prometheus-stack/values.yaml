@@ -1524,7 +1524,7 @@ kube-prometheus-stack:
     # Use an existing secret for the admin user.
     admin:
       ## Name of the secret. Can be templated.
-      existingSecret: ""
+      existingSecret: "grafana-admin-user"
       userKey: admin-user
       passwordKey: admin-password
 
@@ -5695,8 +5695,19 @@ kube-prometheus-stack:
           # key: ""
         # will render alertmanagersConfig secret data and configure it to be used by Thanos Ruler custom resource, ignored when alertmanagersConfig.existingSecret is set
         # https://thanos.io/tip/components/rule.md/#alertmanager
-        secret: {}
-          # alertmanagers:
+        secret: ## MODIFIED     
+          alertmanagers:
+            - api_version: v2
+              scheme: http
+              http_config:
+                basic_auth:
+                  username: "admin"
+                  password_file: "/etc/thanos/secrets/alertmanager-basic-auth/password"
+      extraSecretMounts:
+        - name: alertmanager-basic-auth
+          secretName: alertmanager-basic-auth
+          mountPath: /etc/thanos/secrets/alertmanager-basic-auth
+          readOnly: true
           # - api_version: v2
           #   http_config:
           #     basic_auth:

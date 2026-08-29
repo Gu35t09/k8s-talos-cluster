@@ -1,0 +1,19 @@
+{
+  "kind": "SealedSecret",
+  "apiVersion": "bitnami.com/v1alpha1",
+  "metadata": {
+    "name": "alertmanager-basic-auth",
+    "namespace": "kube-prometheus-stack"
+  },
+  "spec": {
+    "template": {
+      "metadata": {
+        "name": "alertmanager-basic-auth",
+        "namespace": "kube-prometheus-stack"
+      }
+    },
+    "encryptedData": {
+      "password": "AgCCENGZfemP0F4rZitwpRd7ewd97NyEDYiwRXCM95V+X5tYe36bHWzOmbj5HBMDL7Nal+eLsyl7iODmpG75LKs4mPJ40yHqDM/XyLqp+i3SevGAouGKSlVjpOIIc2mgYICXjI1Gh/GnyH+tTUVyFARSQTN6tYhHAy+KNygmIbYE61l/MJvceDiJQIhSTzmcm2uSe0S3llCOVMfmFsuTWvQd9ztGdeepSEItx9TOJDLSHeesdNpELjrAj+IWpeBviAmMtFJZNdNtDeyhvXiN94D2t5HsJeAvMtMGL0LYGYKCDx6Q4yGaEpun5CeqSe0bTgTcFAb1l3GpKfMgzbWIDNDnObkCZFw7KceWlYvooeRjO7N4O2orDg89sSu7BISWVJCi7obMshsi33HwEQOyVDT4iAgw/+Fl6JSPIC0LpXzWXBFGMmS4k8EG1uUfvnx3I6He+1NlQvnq4aPtzQRbo14jkIcenAape3roiTd1yFx+i3+AYh3u9XZ9ri0FWLHuq/Rq3xQlORkZR29IEiWfcEfbB/p8m+c1sOAUJzoW2fj3NNoLkaC6khpQhD7MervVd/iHEWWoUn06u/oVLVfcDvJwin3eyGp/c/Xb5gqyNqvIFL4QYN+SvW1Qz9d0aeWQbpA3NkgjK09dz8bKOW2I6njlFRaCsRVqITN+bOGLOwj1SHVBATr+nN/IqN7P1/hmsSpp8vQhD2K60z3wwLoFKWPBaVXrDA=="
+    }
+  }
+}
