@@ -4306,7 +4306,9 @@ kube-prometheus-stack:
 
       ## Allows setting additional arguments for the Prometheus container
       ## ref: https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api-reference/api.md#monitoring.coreos.com/v1.Prometheus
-      additionalArgs: []
+      additionalArgs: ## MODIFIED
+        - name: "rule.concurrent-evaluations"
+          value: "4"
 
       ## Convert all classic histograms to native histograms with custom buckets.
       ## This corresponds to the 'convert_classic_histograms_to_nhcb' field in Prometheus configuration.
@@ -4357,7 +4359,7 @@ kube-prometheus-stack:
 
       ## Interval between consecutive evaluations.
       ##
-      evaluationInterval: ""
+      evaluationInterval: "1m" ## MODIFIED
 
       ## ListenLocal makes the Prometheus server listen on loopback, so that it does not bind against the Pod IP.
       ##
