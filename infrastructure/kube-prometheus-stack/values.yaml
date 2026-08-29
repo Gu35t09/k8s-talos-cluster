@@ -1576,7 +1576,7 @@ kube-prometheus-stack:
     persistence:
       enabled: true
       type: sts
-      storageClassName: "longhorn (default)"
+      storageClassName: "longhorn"
       accessModes:
         - ReadWriteOnce
       size: 2Gi
@@ -4740,6 +4740,15 @@ kube-prometheus-stack:
       storageSpec: {}
       ## Using PersistentVolumeClaim
       ##
+      ## MODIFIED 
+      volumeClaimTemplate:
+        spec:
+          storageClassName: longhorn
+          accessModes:
+            - ReadWriteOnce
+          resources:
+            requests:
+              storage: 5Gi
       #  volumeClaimTemplate:
       #    spec:
       #      storageClassName: gluster
