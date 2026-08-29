@@ -85,10 +85,10 @@ spec:
         severity: warning
     - alert: LonghornNodeStorageAllocationWarning
       annotations:
-        description: "Longhorn storage allocation on node {{ "{{$labels.node}}" }} is at {{ "{{$value}}" }}% for more than 5 minutes."
+        description: Longhorn storage allocation on node {{ "{{$labels.node}}" }} is at {{ "{{$value}}" }}% for more than 5 minutes.
         summary: Longhorn node storage allocated/scheduled capacity is high.
       expr: (longhorn_node_storage_scheduled_bytes / longhorn_node_storage_capacity_bytes) * 100 > 70
       for: 5m
       labels:
-        issue: "High storage allocation on node {{ "{{$labels.node}}" }}."
+        issue: High storage allocation on node {{ "{{$labels.node}}" }}.
         severity: warning
