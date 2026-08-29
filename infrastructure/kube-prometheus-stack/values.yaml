@@ -3981,7 +3981,7 @@ kube-prometheus-stack:
     #     someoneelse:$apr1$DMZX2Z4q$6SbQIfyuLQd.xmo/P0m2c.
 
     ingress:
-      enabled: false
+      enabled: true ## MODIFIED
 
       ingressClassName: ""
 
@@ -3994,9 +3994,8 @@ kube-prometheus-stack:
       ## Hostnames.
       ## Must be provided if Ingress is enabled.
       ##
-      # hosts:
-      #   - prometheus.domain.com
-      hosts: []
+      hosts: ## MODIFIED
+        - prometheus.greyroom.net ## MODIFIED
 
       ## Paths to use for ingress rules - one path should match the prometheusSpec.routePrefix
       ##
@@ -4010,10 +4009,10 @@ kube-prometheus-stack:
       ## TLS configuration for Prometheus Ingress
       ## Secret must be manually created in the namespace
       ##
-      tls: []
-        # - secretName: prometheus-general-tls
-        #   hosts:
-        #     - prometheus.example.com
+      tls: ## MODIFIED
+         - secretName: prometheus-general-tls ## MODIFIED
+           hosts: ## MODIFIED
+             - prometheus.greyroom.net ## MODIFIED
 
     # -- BETA: Configure the gateway routes for the chart here.
     # More routes can be added by adding a dictionary key like the 'main' route.

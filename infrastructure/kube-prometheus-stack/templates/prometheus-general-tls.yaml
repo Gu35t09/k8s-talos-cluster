@@ -1,0 +1,14 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: prometheus-general-tls
+  namespace: kube-prometheus-stack
+spec:
+  secretName: prometheus-general-tls
+  issuerRef:
+    name: issuer-letsencrypt-production
+    kind: ClusterIssuer
+  commonName: "prometheus.greyroom.net"
+  dnsNames:
+    - "prometheus.greyroom.net"
