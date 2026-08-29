@@ -83,3 +83,12 @@ spec:
       labels:
         issue: Longhorn node {{ "{{$labels.node}}" }} experiences high CPU pressure.
         severity: warning
+    - alert: LonghornNodeStorageAllocationWarning
+      annotations:
+        description: Longhorn storage allocation on node {{ "{{$labels.node}}" }} is at {{ "{{$value}}" }}% for more than 5 minutes.
+        summary: Longhorn node storage allocated capacity is over 90%.
+      expr: (longhorn_node_storage_reservation_bytes / longhorn_node_storage_capacity_bytes) * 100 > 90
+      for: 5m
+      labels:
+        issue: High storage allocation on node {{ "{{$labels.node}}" }}.
+        severity: warning
