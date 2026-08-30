@@ -24,6 +24,6 @@ version: &v 0.29.0
 appVersion: "1.30.0"
 
 dependencies:
-- name: cnpg
+- name: cloudnative-pg
   version: *v
   repository: https://cloudnative-pg.github.io/charts
