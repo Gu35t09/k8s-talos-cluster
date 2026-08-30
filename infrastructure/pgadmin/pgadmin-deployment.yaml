@@ -25,7 +25,7 @@ spec:
             allowPrivilegeEscalation: false
 
           ports:
-            - containerPort: 3004
+            - containerPort: 80
               protocol: TCP
 
           envFrom:
