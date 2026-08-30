@@ -1,0 +1,14 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: vikunja-general-tls
+  namespace: vikunja
+spec:
+  secretName: vikunja-general-tls
+  issuerRef:
+    name: issuer-letsencrypt-production
+    kind: ClusterIssuer
+  commonName: "vikunja2.greyroom.net"
+  dnsNames:
+    - "vikunja2.greyroom.net"
