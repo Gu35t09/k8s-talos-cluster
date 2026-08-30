@@ -1,0 +1,14 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: netbox-general-tls
+  namespace: netbox
+spec:
+  secretName: netbox-general-tls
+  issuerRef:
+    name: issuer-letsencrypt-production
+    kind: ClusterIssuer
+  commonName: "netbox.greyroom.net"
+  dnsNames:
+    - "netbox.greyroom.net"
