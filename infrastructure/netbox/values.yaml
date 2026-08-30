@@ -86,10 +86,10 @@ netbox:
   # See `existingSecret` for details
   superuser:
     name: admin
-    email: admin@example.com
+    email: admin@greyroom.net ## MODIFIED
     password: ""
     apiToken: ""
-    existingSecret: ""
+    existingSecret: "netbox-superuser-credentials"
 
   # This is a list of valid fully-qualified domain names (FQDNs) for the NetBox
   # server. NetBox will not permit write access to the server via any other
