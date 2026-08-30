@@ -436,8 +436,7 @@ vikunja:
 
       ## Configure the hosts for the ingress
       hosts:
-        - # -- Host address. Helm template can be passed.
-          host: vikunja2.greyroom.net ## MODIFIED
+        - host: vikunja2.greyroom.net ## MODIFIED
           ## Configure the paths for the host
           paths:
             - # -- Path.  Helm template can be passed.
@@ -445,9 +444,9 @@ vikunja:
               pathType: Prefix
               service:
                 # -- Overrides the service name reference for this path
-                name:
+                name: vikunja ## MODIFIED
                 # -- Overrides the service port reference for this path
-                port:
+                port: 3456 ## MODIFIED
 
       # -- Configure TLS for the ingress. Both secretName and hosts can process a Helm template.
       tls: ## MODIFIED
