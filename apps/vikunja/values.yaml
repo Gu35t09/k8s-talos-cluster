@@ -32,19 +32,6 @@ vikunja:
         http:
           port: 3456
 
-  ingress:
-    main:
-      enabled: true
-      hosts:
-        - host: your-domain.com
-          paths:
-            - path: /
-
-      tls:
-        - secretName: vikunja-general-tls
-          hosts:
-            - vikunja2.greyroom.net
-
   persistence:
     config:
       enabled: true
