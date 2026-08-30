@@ -4,28 +4,25 @@ vikunja:
 
   env:
     VIKUNJA_SERVICE_PUBLICURL: "https://vikunja2.greyroom.net/"
-    VIKUNJA_DATABASE_TYPE: "postgres"
-    VIKUNJA_DATABASE_HOST: "pg-cluster-vikunja-rw"
-    VIKUNJA_DATABASE_PORT: "5432"
+    VIKUNJA_DB_TYPE: "postgres"
+    VIKUNJA_DB_HOST: "pg-cluster-vikunja-rw"
+    VIKUNJA_DB_PORT: "5432"
     VIKUNJA_LOG_LEVEL: "DEBUG"
 
-    VIKUNJA_DATABASE_USER:
-      valueFrom:
-        secretKeyRef:
-          name: pg-cluster-vikunja-app
-          key: username
-
-    VIKUNJA_DATABASE_PASSWORD:
-      valueFrom:
-        secretKeyRef:
-          name: pg-cluster-vikunja-app
-          key: password
-
-    VIKUNJA_DATABASE_DATABASE:
-      valueFrom:
-        secretKeyRef:
-          name: pg-cluster-vikunja-app
-          key: dbname
+  # Use envValueFrom for secret key references
+  envValueFrom:
+    VIKUNJA_DB_USER:
+      secretKeyRef:
+        name: pg-cluster-vikunja-app
+        key: username
+    VIKUNJA_DB_PASSWORD:
+      secretKeyRef:
+        name: pg-cluster-vikunja-app
+        key: password
+    VIKUNJA_DB_DATABASE:
+      secretKeyRef:
+        name: pg-cluster-vikunja-app
+        key: dbname
 
   service:
     main:
