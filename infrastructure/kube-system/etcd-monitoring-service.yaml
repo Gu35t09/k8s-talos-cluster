@@ -1,0 +1,34 @@
+# etcd-monitoring-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: etcd-metrics
+  namespace: kube-system
+  labels:
+    app: etcd
+    component: metrics
+spec:
+  clusterIP: None
+  ports:
+    - name: metrics
+      port: 2381
+      targetPort: 2381
+      protocol: TCP
+---
+apiVersion: v1
+kind: Endpoints
+metadata:
+  name: etcd-metrics
+  namespace: kube-system
+  labels:
+    app: etcd
+    component: metrics
+subsets:
+  - addresses:
+      - ip: 192.168.100.21
+      - ip: 192.168.100.22
+      - ip: 192.168.100.23
+    ports:
+      - name: metrics
+        port: 2381
+        protocol: TCP
