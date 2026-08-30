@@ -15,7 +15,7 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: &v 5.1.0
+version: &v 2.2.1
 
 
 # This is the version number of the application being deployed. This version number should be
@@ -24,6 +24,6 @@ version: &v 5.1.0
 appVersion: "2.5.0"
 
 dependencies:
-- name: app-template
+- name: vikunja
   version: *v
-  repository: https://bjw-s-labs.github.io/helm-charts
+  repository: oci://ghcr.io/go-vikunja/helm-chart/
