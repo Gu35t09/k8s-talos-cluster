@@ -20,23 +20,11 @@ vikunja:
         secretKeyRef:
           name: pg-cluster-vikunja-app
           key: username
-      VIKUNJA_DATABASE_USER:
-        secretKeyRef:
-          name: pg-cluster-vikunja-app
-          key: username
       VIKUNJA_DB_PASSWORD:
         secretKeyRef:
           name: pg-cluster-vikunja-app
           key: password
-      VIKUNJA_DATABASE_PASSWORD:
-        secretKeyRef:
-          name: pg-cluster-vikunja-app
-          key: password
       VIKUNJA_DB_DATABASE:
-        secretKeyRef:
-          name: pg-cluster-vikunja-app
-          key: dbname
-      VIKUNJA_DATABASE_DATABASE:
         secretKeyRef:
           name: pg-cluster-vikunja-app
           key: dbname
