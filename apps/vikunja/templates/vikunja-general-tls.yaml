@@ -9,6 +9,6 @@ spec:
   issuerRef:
     name: issuer-letsencrypt-production
     kind: ClusterIssuer
-  commonName: "vikunja2.greyroom.net"
+  commonName: "vikunja.greyroom.net"
   dnsNames:
-    - "vikunja2.greyroom.net"
+    - "vikunja.greyroom.net"

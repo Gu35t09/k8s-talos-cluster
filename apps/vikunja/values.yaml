@@ -4,7 +4,7 @@ vikunja:
       repository: vikunja/vikunja
 
     env:
-      VIKUNJA_SERVICE_PUBLICURL: "https://vikunja2.greyroom.net/"
+      VIKUNJA_SERVICE_PUBLICURL: "https://vikunja.greyroom.net/"
       VIKUNJA_DATABASE_TYPE: "postgres"
       VIKUNJA_DATABASE_HOST: "pg-cluster-vikunja-rw"
       VIKUNJA_DATABASE_PORT: "5432"
