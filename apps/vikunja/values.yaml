@@ -323,7 +323,7 @@ vikunja:
       nameOverride:
 
       # -- Set the service type
-      type: pg-clusterIP
+      type: ClusterIP
 
       # -- Specify the externalTrafficPolicy for the service. Options: pg-cluster, Local
       # -- [[ref](https://kubernetes.io/docs/tutorials/services/source-ip/)]
