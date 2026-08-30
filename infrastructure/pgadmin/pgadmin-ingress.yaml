@@ -16,6 +16,6 @@ spec:
           service:
             name:  pgadmin
             port:
-              number: 3004
+              number: 80
   tls:
   - secretName: pgadmin-certificates-greyroom-net-production
