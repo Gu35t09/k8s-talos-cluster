@@ -52,11 +52,11 @@ velero:
     # -- Mount a credentials secret into the Velero pods
     useSecret: true
     # -- Existing secret containing the credentials file
-    existingSecret: ""
+    existingSecret: "garage-s3-velero-bucket-credentials" ## MODIFIED
     # -- Secret name to create when existingSecret is empty
     name: ""
     # -- Key used inside the credentials secret
-    key: cloud
+    key: credentials ## MODIFIED
     # -- Full credentials file content used when creating the secret inline
     secretContents: ""
     # -- Extra environment variables loaded from the credentials secret
