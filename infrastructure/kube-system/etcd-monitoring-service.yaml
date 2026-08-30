@@ -1,31 +1,19 @@
+# etcd-monitoring-service.yaml
 apiVersion: v1
 kind: Service
 metadata:
-  name: custom-etcd-metrics  # Changed name
+  name: custom-etcd-metrics
   namespace: kube-system
   labels:
     app.kubernetes.io/name: custom-etcd-metrics
 spec:
-  clusterIP: None
+  type: ClusterIP
+  externalIPs:
+    - 192.168.100.21
+    - 192.168.100.22
+    - 192.168.100.23
   ports:
     - name: metrics
       port: 2381
       targetPort: 2381
       protocol: TCP
----
-apiVersion: v1
-kind: Endpoints
-metadata:
-  name: custom-etcd-metrics  # Changed name
-  namespace: kube-system
-  labels:
-    app.kubernetes.io/name: custom-etcd-metrics
-subsets:
-  - addresses:
-      - ip: 192.168.100.21
-      - ip: 192.168.100.22
-      - ip: 192.168.100.23
-    ports:
-      - name: metrics
-        port: 2381
-        protocol: TCP
