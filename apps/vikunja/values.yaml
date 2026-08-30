@@ -149,6 +149,7 @@ vikunja:
   # F) - name: TZ
   #      value: '{{ .Release.Name }}'
   env: ## MODIFIED
+    VIKUNJA_SERVICE_PUBLICURL: "https://vikunja2.greyroom.net/"
     VIKUNJA_DATABASE_TYPE: "postgres"
     VIKUNJA_DATABASE_HOST: "pg-cluster-vikunja-rw"
     VIKUNJA_DATABASE_PORT: "5432"

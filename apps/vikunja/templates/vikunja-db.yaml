@@ -7,9 +7,5 @@ spec:
   bootstrap:
     initdb:
       database: vikunja
-      import:
-        type: microservice
-        databases:
-          - vikunja
   storage:
     size: 1Gi
