@@ -1161,6 +1161,7 @@ netbox:
   ##
   valkey:
     enabled: true
+    architecture: standalone ## MODIFIED
     replicaCount: 1 ## MODIFIED
     sentinel:
       enabled: false
