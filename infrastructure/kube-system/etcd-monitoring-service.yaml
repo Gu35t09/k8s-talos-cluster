@@ -1,12 +1,10 @@
-# etcd-monitoring-service.yaml
 apiVersion: v1
 kind: Service
 metadata:
-  name: etcd-metrics
+  name: custom-etcd-metrics  # Changed name
   namespace: kube-system
   labels:
-    app: etcd
-    component: metrics
+    app.kubernetes.io/name: custom-etcd-metrics
 spec:
   clusterIP: None
   ports:
@@ -18,11 +16,10 @@ spec:
 apiVersion: v1
 kind: Endpoints
 metadata:
-  name: etcd-metrics
+  name: custom-etcd-metrics  # Changed name
   namespace: kube-system
   labels:
-    app: etcd
-    component: metrics
+    app.kubernetes.io/name: custom-etcd-metrics
 subsets:
   - addresses:
       - ip: 192.168.100.21

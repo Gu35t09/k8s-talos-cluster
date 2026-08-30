@@ -2,7 +2,7 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: etcd-metrics
+  name: custom-etcd-metrics
   namespace: kube-prometheus-stack
   labels:
     release: kube-prometheus-stack
@@ -12,8 +12,7 @@ spec:
       - kube-system
   selector:
     matchLabels:
-      app: etcd
-      component: metrics
+      app.kubernetes.io/name: custom-etcd-metrics  # Matches the label on your new Service
   endpoints:
     - port: metrics
       interval: 15s
