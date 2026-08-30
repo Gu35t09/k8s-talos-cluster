@@ -26,4 +26,4 @@ appVersion: "2.5.0"
 dependencies:
 - name: vikunja
   version: *v
-  repository: oci://ghcr.io/go-vikunja/helm-chart/
+  repository: oci://ghcr.io/go-vikunja/helm-chart
