@@ -442,11 +442,7 @@ vikunja:
             - # -- Path.  Helm template can be passed.
               path: /
               pathType: Prefix
-              service:
-                # -- Overrides the service name reference for this path
-                name: vikunja ## MODIFIED
-                # -- Overrides the service port reference for this path
-                port: 3456 ## MODIFIED
+
 
       # -- Configure TLS for the ingress. Both secretName and hosts can process a Helm template.
       tls: ## MODIFIED
