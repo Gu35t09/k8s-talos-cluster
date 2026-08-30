@@ -309,7 +309,7 @@ pgadmin4:
   ## Chart reinstall needed to apply changes
   env:
     ## Can be email or nickname
-    email: mattia ## MODIFIED
+    email: admin@greyroom.net ## MODIFIED
     password: SuperSecret
     # pgpassfile: /var/lib/pgadmin/storage/pgadmin/file.pgpass
 
