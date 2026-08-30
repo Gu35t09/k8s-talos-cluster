@@ -17,4 +17,4 @@ appVersion: "4.6.9"
 dependencies:
 - name: netbox
   version: *v
-  repository: oci://ghcr.io/netbox-community/netbox-chart/netbox
+  repository: oci://ghcr.io/netbox-community/netbox-chart
