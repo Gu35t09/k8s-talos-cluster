@@ -1,62 +1,63 @@
 vikunja:
-  image:
-    repository: vikunja/vikunja
+  vikunja:
+    image:
+      repository: vikunja/vikunja
 
-  env:
-    VIKUNJA_SERVICE_PUBLICURL: "https://vikunja2.greyroom.net/"
-    # Override legacy defaults so SQLite is completely disabled
-    VIKUNJA_DATABASE_TYPE: "postgres"
-    VIKUNJA_DB_TYPE: "postgres"
-    VIKUNJA_DB_HOST: "pg-cluster-vikunja-rw"
-    VIKUNJA_DATABASE_HOST: "pg-cluster-vikunja-rw"
-    VIKUNJA_DB_PORT: "5432"
-    VIKUNJA_DATABASE_PORT: "5432"
-    VIKUNJA_LOG_LEVEL: "DEBUG"
+    env:
+      VIKUNJA_SERVICE_PUBLICURL: "https://vikunja2.greyroom.net/"
+      # Override legacy defaults so SQLite is completely disabled
+      VIKUNJA_DATABASE_TYPE: "postgres"
+      VIKUNJA_DB_TYPE: "postgres"
+      VIKUNJA_DB_HOST: "pg-cluster-vikunja-rw"
+      VIKUNJA_DATABASE_HOST: "pg-cluster-vikunja-rw"
+      VIKUNJA_DB_PORT: "5432"
+      VIKUNJA_DATABASE_PORT: "5432"
+      VIKUNJA_LOG_LEVEL: "DEBUG"
 
-  # Standard Helm chart syntax for Secret references
-  envValueFrom:
-    VIKUNJA_DB_USER:
-      secretKeyRef:
-        name: pg-cluster-vikunja-app
-        key: username
-    VIKUNJA_DATABASE_USER:
-      secretKeyRef:
-        name: pg-cluster-vikunja-app
-        key: username
-    VIKUNJA_DB_PASSWORD:
-      secretKeyRef:
-        name: pg-cluster-vikunja-app
-        key: password
-    VIKUNJA_DATABASE_PASSWORD:
-      secretKeyRef:
-        name: pg-cluster-vikunja-app
-        key: password
-    VIKUNJA_DB_DATABASE:
-      secretKeyRef:
-        name: pg-cluster-vikunja-app
-        key: dbname
-    VIKUNJA_DATABASE_DATABASE:
-      secretKeyRef:
-        name: pg-cluster-vikunja-app
-        key: dbname
+    # Standard Helm chart syntax for Secret references
+    envValueFrom:
+      VIKUNJA_DB_USER:
+        secretKeyRef:
+          name: pg-cluster-vikunja-app
+          key: username
+      VIKUNJA_DATABASE_USER:
+        secretKeyRef:
+          name: pg-cluster-vikunja-app
+          key: username
+      VIKUNJA_DB_PASSWORD:
+        secretKeyRef:
+          name: pg-cluster-vikunja-app
+          key: password
+      VIKUNJA_DATABASE_PASSWORD:
+        secretKeyRef:
+          name: pg-cluster-vikunja-app
+          key: password
+      VIKUNJA_DB_DATABASE:
+        secretKeyRef:
+          name: pg-cluster-vikunja-app
+          key: dbname
+      VIKUNJA_DATABASE_DATABASE:
+        secretKeyRef:
+          name: pg-cluster-vikunja-app
+          key: dbname
 
-  service:
-    main:
-      ports:
-        http:
-          port: 3456
+    service:
+      main:
+        ports:
+          http:
+            port: 3456
 
-  persistence:
-    config:
-      enabled: true
-      type: pvc
-      size: 1Gi
+    persistence:
+      config:
+        enabled: true
+        type: pvc
+        size: 1Gi
 
-    data:
-      enabled: true
-      size: 2Gi
-      mountPath: /app/vikunja/files
+      data:
+        enabled: true
+        size: 2Gi
+        mountPath: /app/vikunja/files
 
-    # Disable the default SQLite PVC volume
-    database:
-      enabled: false
+      # Disable the default SQLite PVC volume
+      database:
+        enabled: false
