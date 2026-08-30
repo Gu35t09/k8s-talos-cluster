@@ -1,0 +1,15 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: pg-cluster-vikunja
+spec:
+  instances: 1
+  bootstrap:
+    initdb:
+      database: vikunja
+      import:
+        type: microservice
+        databases:
+          - vikunja
+  storage:
+    size: 1Gi
