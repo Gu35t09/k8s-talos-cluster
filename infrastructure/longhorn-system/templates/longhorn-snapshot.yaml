@@ -1,0 +1,10 @@
+apiVersion: snapshot.storage.k8s.io/v1
+kind: VolumeSnapshotClass
+metadata:
+  name: longhorn-snapshot
+  annotations:
+    k10.kasten.io/is-snapshot-class: "true" # Tells Kasten K10 to use this snapshot class
+driver: driver.longhorn.io
+deletionPolicy: Delete
+parameters:
+  type: snap # Tells Longhorn to take an in-cluster CSI snapshot
