@@ -5,11 +5,25 @@ vikunja:
 
     env:
       VIKUNJA_SERVICE_PUBLICURL: "https://vikunja2.greyroom.net/"
-      # Override legacy defaults so SQLite is completely disabled
       VIKUNJA_DATABASE_TYPE: "postgres"
       VIKUNJA_DATABASE_HOST: "pg-cluster-vikunja-rw"
       VIKUNJA_DATABASE_PORT: "5432"
       VIKUNJA_LOG_LEVEL: "DEBUG"
+      VIKUNJA_DATABASE_USER:
+        valueFrom:
+          secretKeyRef:
+            name: pg-cluster-vikunja-app
+            key: username
+      VIKUNJA_DATABASE_PASSWORD:
+        valueFrom:
+          secretKeyRef:
+            name: pg-cluster-vikunja-app
+            key: password
+      VIKUNJA_DATABASE_DATABASE:
+        valueFrom:
+          secretKeyRef:
+            name: pg-cluster-vikunja-app
+            key: dbname
 
     # Standard Helm chart syntax for Secret references
     envValueFrom:
