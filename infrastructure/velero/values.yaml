@@ -213,11 +213,12 @@ velero:
       port: 8085
     serviceMonitor:
       # -- Create a ServiceMonitor for Prometheus Operator
-      enabled: false
+      enabled: true ## MODIFIED
       # -- ServiceMonitor annotations
       annotations: {}
       # -- Additional ServiceMonitor labels
-      additionalLabels: {}
+      additionalLabels: ## MODIFIED
+        release: kube-prometheus-stack ## MODIFIED
       # -- ServiceMonitor namespace (defaults to release namespace)
       namespace: ""
       # -- Metrics scrape interval
