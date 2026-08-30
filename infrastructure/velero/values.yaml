@@ -125,7 +125,7 @@ velero:
         annotations: {}
         config:
           region: local
-          s3Url: https://garage.greyroom.net
+          s3Url: https://s3.greyroom.net
           s3ForcePathStyle: true
           insecureSkipTLSVerify: false
           publicUrl: ""
