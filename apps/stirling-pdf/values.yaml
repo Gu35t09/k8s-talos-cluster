@@ -1,4 +1,4 @@
-stirling-pdf:
+stirling-pdf-chart:
   extraArgs:
     []
     # - --storage-timestamp-tolerance 1s
