@@ -1,0 +1,14 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: stirling-pdf-general-tls
+  namespace: stirling-pdf
+spec:
+  secretName: stirling-pdf-general-tls
+  issuerRef:
+    name: issuer-letsencrypt-production
+    kind: ClusterIssuer
+  commonName: "pdf.greyroom.net"
+  dnsNames:
+    - "pdf.greyroom.net"
