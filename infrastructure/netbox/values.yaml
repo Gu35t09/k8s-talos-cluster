@@ -537,7 +537,7 @@ netbox:
     ##
     storageClass: "longhorn" ## MODIFIED
     subPath: ""
-    accessMode: ReadWriteOnce
+    accessMode: ReadWriteMany ## MODIFIED
     size: 1Gi
     existingClaim: ""
     annotations: {}
