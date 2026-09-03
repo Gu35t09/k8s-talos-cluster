@@ -4785,7 +4785,7 @@ kube-prometheus-stack:
         - job_name: 'opnsense-node-exporter'
           static_configs:
             - targets:
-                - '192.168.1.2:9100' # Replace with your OPNSense IP:Port
+                - '192.168.100.2:9100' # Replace with your OPNSense IP:Port
               labels:
                 instance: 'opnsense'
       # - job_name: kube-etcd
