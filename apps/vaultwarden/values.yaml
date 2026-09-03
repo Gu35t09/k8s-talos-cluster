@@ -509,11 +509,11 @@ vaultwarden:
   ## of any of the restrictions above
   ##
   ## If signupDomains is set, then the value of signupsAllowed is ignored
-  signupsAllowed: true ## MODIFIED
+  signupsAllowed: false ## MODIFIED
 
   ## @param signupsVerify Whether to require account verification for newly-registered users.
   ##
-  signupsVerify: "false"
+  signupsVerify: "true"
 
   ## @param signupDomains List of domain names for users allowed to register. For example:
   ## example.com,example.net,example.org.
@@ -616,11 +616,11 @@ vaultwarden:
     ## @param adminToken.existingSecret Specify an existing Kubernetes secret containing the admin token. Also set adminToken.existingSecretKey.
     ## Example: admincreds_secret
     ##
-    existingSecret: ""
+    existingSecret: "vaultwarden-admin-token"
     ## @param adminToken.existingSecretKey When using adminToken.existingSecret, specify the key containing the token.
     ## Example: ADMIN_TOKEN
     ##
-    existingSecretKey: ""
+    existingSecretKey: "token"
     ## @param adminToken.value Plain or argon2 string containing the admin token.
     ##
     value: ""

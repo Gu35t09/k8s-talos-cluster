@@ -1,0 +1,19 @@
+{
+  "kind": "SealedSecret",
+  "apiVersion": "bitnami.com/v1alpha1",
+  "metadata": {
+    "name": "vaultwarden-admin-token",
+    "namespace": "vaultwarden"
+  },
+  "spec": {
+    "template": {
+      "metadata": {
+        "name": "vaultwarden-admin-token",
+        "namespace": "vaultwarden"
+      }
+    },
+    "encryptedData": {
+      "token": "AgAD2dVK82GShd7NLfvSQycoWregedXzqx2FYmJpN9wWQVxiJanOv9M20DU9Wde8tHh301Mlp/fhjCThhbTeQeJUv1Z6nrKHaTZzorn8+/zfhH3AT7vWjq5wHeGU0I2sWjBeacDCvKVxP2gDaXvvwT7OOIoweTeWgUtcC3VRQEN1UcFU85ywwwPjcUG10LWgKB63iDalBe71bAn0VuoSS0CDrJDXw09kPTugOEQ9Eho4e2r/SluGTqYeiUiU0iwQct6+SJRQf2YzeTd3RinMlpO2nsoTas221pPPlbrlC/19TFDwD4u56x9CHwOzVkBJv3rImLuarVThRScliSppT4ccyvNcQwZWE79udzd8lZ0ZAFiHjp4IymtUHzXoBviIeVcrUJOPMunL9KVogaflE9P25SwbGCH+AqBZ6mXfKb25zRZuYFXNzVGlkm6tMAnBbSHIrDEkQSvlC6oL8g2caC6uGKLhzEZKozhA8A423dzup24lelMy8g9liMNLjkurrp6Y0ng+qdLraVE8sPC52f7m9YdlSmr9DqxVhPfjzG0USnrkgVcOvdXWu/m/jlciUPkWpcMu+a9vNj+3uy6W7V/ZSxHyyJpYl8jMqtgl8RX/eyp/LuCPQPXbSpbbEu4LCHJqaGIF9sBrPFKtBXNxOQRm5Dye7J3T7Cal2hhh5SOJijg8Y6UQ8VYyA9VGo/PQm8i/n+zffL9KUw0hK9BPH1qrHeBDghgpkvgpqxuaqlysQNgA"
+    }
+  }
+}
