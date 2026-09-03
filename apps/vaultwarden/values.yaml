@@ -310,7 +310,7 @@ vaultwarden:
        class: ""
        path: "/data"
        keepPvc: false
-       accessMode: "ReadWriteOnce"
+       accessMode: "ReadWriteMany" ## MODIFIED
       # labels: {}
 
     ## @param storage.attachments Attachments directory configuration, refer to values.yaml for parameters.
@@ -322,7 +322,7 @@ vaultwarden:
        class: ""
        path: /files
        keepPvc: false
-       accessMode: "ReadWriteOnce"
+       accessMode: "ReadWriteMany" ## MODIFIED
       # labels: {}
 
   ## @param webVaultEnabled Enable Web Vault
